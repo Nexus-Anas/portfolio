@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Anas AREJDAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <style>
+        #videoBG {
+            position: fixed;
+            object-fit: cover; /* This ensures the video covers the entire container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+
+    <video id="videoBG" autoplay muted loop onended="changeVideo()">
+        <source src="images/space.mp4" type="video/mp4" />
+    </video>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>A</span>nas.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="bi bi-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="bi bi-list" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>.NET Developer</p>
+                <h1>Greetings! I'm <span>Anas</span> AREJDAL,<br>specializing in .NET development.</h1>
+            </div>
+        </div>
+    </div>
+
+
+<!----------------------------------About-------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img id="about-img" src="images/Me2.jpg" alt="">   
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a .NET developer with expertise in C#, ASP.NET Core and MAUI <br> for web, automation and mobile application development. <br> Delivering top-notch solutions for clients' diverse needs.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="showTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="showTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="showTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>C#</li>
+                            <li>ASP.NET CORE</li>
+                            <li>MAUI</li>
+                            <li>Selenium</li>
+                            <li>Python</li>
+                            <li>Design Patterns</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>OCT 23 - NOW</span><br>Skill Development - JobInTech</li>
+                            <li><span>JUN 23 - SEP 23</span><br>Intern - MEGADEV</li>
+                            <li><span>MAY 22 - JUN 22</span><br>Intern - VITI CAR</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2023</span><br>Bachelor of Database Administration - FEDE</li>
+                            <li><span>2020 - 2022</span><br>Specialized Technician in IT Development - MIAGE</li>
+                            <li><span>2020 - 2022</span><br>English Education - American Language Center</li>
+                            <li><span>2019 - 2020</span><br>Physics Baccalaureate - Jabir Ibn Haiyan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<!----------------------------------Services-------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="bi bi-code-slash"></i>
+                <h2>Web Development</h2>
+                <p>I specialize in crafting dynamic and scalable web applications using cutting-edge technologies such as C#, ASP.NET Core, Blazor, and React. With a keen eye for user experience and a commitment to best practices, I deliver web solutions that not only meet but exceed client expectations.</p>
+            </div>
+            <div>
+                <i class="bi bi-phone"></i>
+                <h2>Mobile Development</h2>
+                <p>My expertise extends to cross-platform mobile development, with a focus on creating engaging and responsive applications. Leveraging frameworks like .NET MAUI, I ensure that mobile solutions are not only visually appealing but also provide a seamless user experience across various devices.</p>
+            </div>
+            <div>
+                <i class="bi bi-robot"></i>
+                <h2>Automation Apps</h2>
+                <p>I excel in developing automation applications that streamline processes and enhance overall efficiency. Using tools like Selenium, I design and implement automated solutions tailored to specific business needs, reducing manual intervention and minimizing errors.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!----------------------------------portfolio-------------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img id="img-work-1" src="images/web.png">
+                <div class="layer">
+                    <h3>MEGA ENCRYPTION</h3>
+                    <p>A cross plateform software that encrypts your data to ensure the maximum security and makes sure the inability of others to understand its content.</p>
+                    <a href="https://github.com/Nexus-Anas/MEGA-ENCRYPTION-WEB" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img id="img-work-2" src="images/map.jpg">
+                <div class="layer">
+                    <h3>GPSP</h3>
+                    <p>GPSP is a mobile app (Android and iOS) that enables suppliers to easily locate and connect with nearby clients on a map. Enhancing communication and streamlining operations, GPSP is a user-friendly tool for efficient service delivery.</p>
+                    <a href="https://github.com/Nexus-Anas/GPSP" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img id="img-work-3" src="images/bot.png">
+                <div class="layer">
+                    <h3>GOLDEN FLOW</h3>
+                    <p>An application that utilize Selenium for automatingBitcoin mining. It uses web scraping techniques toextract necessary data and utilize automation toincrease efficiency. Developed with C# and Python</p>
+                    <a href="https://github.com/Nexus-Anas/GOLDENFLOW" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!----------------------------------Contact-------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>anas.vigilante@gmail.com</p>
+                <p>+212 639 757 824</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/anas-arejdal/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Nexus-Anas" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="mailto:anas.vigilante@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+                <a href="images/AREJDAL-ANAS-RESUME.pdf" download class="btn">Download Resume</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="enter your name" required>
+                    <input type="email" name="Email" placeholder="type your email" required>
+                    <textarea name="Message" rows="6" placeholder="type your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg-popup"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Anas AREJDAL. All rights reserved.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
