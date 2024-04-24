@@ -198,15 +198,34 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
 }
 
+.web-service:hover {
+    cursor: pointer;
+    background: dodgerblue;
+    transform: translateY(-10px);
+}
+
+.mobile-service:hover {
+    cursor: pointer;
+    background: crimson;
+    transform: translateY(-10px);
+}
+
+.desktop-service:hover {
+    cursor: pointer;
+    background: mediumseagreen;
+    transform: translateY(-10px);
+}
+
+.automation-service:hover {
+    cursor: pointer;
+    background: orange;
+    transform: translateY(-10px);
+}
+
 .services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-}
-
-.services-list div:hover {
-    background: dodgerblue;
-    transform: translateY(-10px);
 }
 
 
